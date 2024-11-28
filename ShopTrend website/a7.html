@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="shoplogo.png  " alt="" width="50" height="60">
+              <path d=""></path>
+              
+            </svg>
+            <span class="ml-3 text-xl">ShopTrends</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">Home</a>
+            <a class="mr-5 hover:text-gray-900">Explore</a>
+            <a class="mr-5 hover:text-gray-900">Deals</a>
+            <a class="mr-5 hover:text-gray-900">Search</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign Up
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="data:image/jpeg;base64,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" width="400" height="400">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">AirPods Pro 2
+              <br class="hidden lg:inline-block">₹3000
+            </h1>
+            <p class="mb-8 leading-relaxed">Minimise your exposure to loud noise levels with Loud Sound Reduction, use Conversation Boost to focus on voices directly in front of you, and play calming Background Sounds — like the ocean or rain — to mask unwanted environmental noise. Both AirPods Pro 2 and the wireless MagSafe Charging Case (USB-C) are IP54 dust, sweat and water resistant, Footnote ¹² and you can use the Find My app to keep track of them.</p>
+            <div class="flex justify-center">
+              <a href="checkout.html"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Buy now</button></a>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

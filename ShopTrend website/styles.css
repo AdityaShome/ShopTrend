@@ -1,0 +1,88 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Welcome Box */
+.welcome-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #cce7ff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #a3c6f1;
+}
+
+/* Form Styling */
+.form {
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    color: #a3c6f1;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0 1.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color: #1e3c72;
+}
+
+input::placeholder {
+    color: #b0b8c7;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #2a5298;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e3c72;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #d4e6ff;
+}

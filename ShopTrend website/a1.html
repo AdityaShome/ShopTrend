@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="shoplogo.png  " alt="" width="50" height="60">
+              <path d=""></path>
+              
+            </svg>
+            <span class="ml-3 text-xl">ShopTrends</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">Home</a>
+            <a class="mr-5 hover:text-gray-900">Explore</a>
+            <a class="mr-5 hover:text-gray-900">Deals</a>
+            <a class="mr-5 hover:text-gray-900">Search</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign Up
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="data:image/jpeg;base64,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" width="400" height="400">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Iphone 15 pro max
+              <br class="hidden lg:inline-block">₹19,999
+            </h1>
+            <p class="mb-8 leading-relaxed">Experience the iPhone 15 – your dynamic companion. Dynamic Island ensures you stay connected, bubbling up alerts seamlessly while you're busy. Its durable design features infused glass and aerospace-grade aluminum, making it dependable and resistant to water and dust. Capture life with precision using the 48 MP Main Camera, perfect for any shot</p>
+            <div class="flex justify-center">
+              <a href="checkout.html"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Buy now</button></a>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

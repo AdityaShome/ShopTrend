@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Container */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .signup-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .signup-form h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .input-group input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            background-color: #fff;
+        }
+
+        .password-strength {
+            font-size: 0.9em;
+            margin-top: 5px;
+            color: #555;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Link Styling */
+        .signup-form p {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        .signup-form a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .signup-form a:hover {
+            text-decoration: underline;
+        }
+
+        /* Success Message Styling */
+        .success-message {
+            display: none;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h1>Create Account</h1>
+            <form id="signup-form" action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <div id="password-strength" class="password-strength"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+
+            <p>Already have an account? <a href="signin.html">Login here</a></p>
+
+            <!-- Success Message -->
+            <div id="success-message" class="success-message">
+                <p>Account created successfully!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password Strength Indicator
+        const passwordField = document.getElementById('password');
+        const passwordStrengthText = document.getElementById('password-strength');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const form = document.getElementById('signup-form');
+        const successMessage = document.getElementById('success-message');
+
+        passwordField.addEventListener('input', () => {
+            let strength = 0;
+            const password = passwordField.value;
+
+            if (password.length > 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/\d/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            let strengthText = '';
+            switch (strength) {
+                case 0:
+                case 1:
+                    strengthText = 'Weak';
+                    break;
+                case 2:
+                    strengthText = 'Fair';
+                    break;
+                case 3:
+                    strengthText = 'Good';
+                    break;
+                case 4:
+                case 5:
+                    strengthText = 'Strong';
+                    break;
+            }
+
+            passwordStrengthText.textContent = `Strength: ${strengthText}`;
+        });
+
+        // Password Confirmation Check
+        form.addEventListener('submit', (event) => {
+            const password = passwordField.value;
+            const confirmPassword = confirmPasswordField.value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                event.preventDefault(); // Prevent form submission
+            } else {
+                // Show success message
+                event.preventDefault(); // Prevent default form submission
+                successMessage.style.display = 'block'; // Display success message
+            }
+        });
+    </script>
+</body>
+
+</html>
